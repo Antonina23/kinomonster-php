@@ -1,0 +1,26 @@
+<?php
+
+	$nickname = "Pukki";
+
+	$balance = 0;
+	$addBalance1 = 10;
+	$addBalance2 = 35;
+
+	$balance = $addBalance1 + $addBalance2;
+
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body> 
+	<div>Hello, <?php echo $nickname; ?></div>
+	<?php
+		echo "<div>".$balance."</div>";
+	?>
+</body>
+</html>
+
