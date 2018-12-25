@@ -1,39 +1,20 @@
 <?php
 
-	define("DBNAME", "kinomonster");
+$i = 12;
+/*while ($i <= 10) {
+	echo $i."<br>";
+	$i++; /*$i = $i + 1;
+}*/
 
-	$nickname = "Pukki";
+/*do {
+	echo $i."<br>";
+	$i++;
+} while ($i <= 10);*/
 
-	$balance = 0;
-	$addBalance1 = 10;
-	$addBalance2 = 35;
+for($i = 0; $i <= 10; $i++) {
+	echo $i."<br>";
+}
 
-	$balance = $addBalance1 + $addBalance2;
-
-	$svetofor = "";
-	/*if($svetofor == "green") {
-		echo "Светофор зеленый. Я перехожу дорогу";
-	} else if($svetofor == "yellow") {
-		echo "Сейчас светофор желтый";
-	}
-	else {
-		echo "Жду, когда загорится зеленый";
-	}*/
-
-	switch ($svetofor) {
-		case 'green':
-	echo "Светофор зеленый. Я перехожу дорогу";
-			break;
-		case 'yellow':
-	echo "Сейчас светофор желтый";
-			break;
-		case 'red':
-	echo "Жду, когда загорится зеленый";
-			break;
-		default:
-	echo "Светофор сломался, пойду искать другой пешеходный переход";
-			break;
-	}
 ?>
 
 <!DOCTYPE html>
