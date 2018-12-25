@@ -1,18 +1,22 @@
 <?php
 
-$i = 12;
-/*while ($i <= 10) {
-	echo $i."<br>";
-	$i++; /*$i = $i + 1;
+/*$arr[0] = "продукты";
+$arr[1] = "бутылка с водой";*/
+
+/*echo $arr[0];*/
+/*print_r($arr);
+echo count($arr);*/
+
+/*for ($i=0; $i < count($arr); $i++) { 
+	echo $arr[$i]."<br>";
 }*/
 
-/*do {
-	echo $i."<br>";
-	$i++;
-} while ($i <= 10);*/
+$arr[products] = "продукты";
+$arr[water] = "бутылка с водой";
 
-for($i = 0; $i <= 10; $i++) {
-	echo $i."<br>";
+foreach ($arr as $key => $value) {
+	echo $value."<br>";
+	echo "Ключ к массиву: ".$key." - Значение массива: ".$value."<br>";
 }
 
 ?>
