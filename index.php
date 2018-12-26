@@ -1,8 +1,10 @@
 <?php
 
-//print_r($_GET);
+print_r($_POST);
 
-echo $_GET['name'];
+/*if(isset($_POST['name'])) {
+	echo "Мое имя ".$_POST['name'];
+}*/
 
 ?>
 
@@ -14,8 +16,10 @@ echo $_GET['name'];
 </head>
 <body> 
 
-<form action="/" method="get">
+<form action="/" method="post">
 	<input type="text" name="name" placeholder="Ваше имя">
+	<textarea name="comment"></textarea>
+	<input type="hidden" name="user_id" value="666">
 	<input type="submit" value="отправить">
 </form>
 
