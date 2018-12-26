@@ -11,17 +11,25 @@ array_unshift($arr, "апельсин");
 array_push($arr, "апельсин");
 
 $arr = array_unique($arr);
-$arr = array_reverse($arr);
 
-sort($arr);
+$arr2 = array("кокос", "арбуз", "банан");
 
-//перемешивание содержимого, когда нужно рандомное значение каждый раз:
-shuffle($arr);
+$newarr = array_merge($arr, $arr2);
 
-foreach ($arr as $key => $value) {
+foreach ($newarr as $key => $value) {
 	echo "Ключ к массиву: ".$key." - Значение массива: ".$value."<br>";
 }
 
+// преобразует массив в строку:
+/*$str = implode(", ", $newarr);
+echo "<br>".$str;*/
+
+// преобразует строку в массив:
+$str = "продукты, бутылка воды, кокос, банан";
+$strtoarr = explode(", ", $str);
+echo "<pre>";
+print_r($strtoarr);
+echo "</pre>";
 ?>
 
 <!DOCTYPE html>
