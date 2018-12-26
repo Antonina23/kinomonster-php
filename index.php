@@ -1,21 +1,12 @@
 <?php
 
-/*$arr[0] = "продукты";
-$arr[1] = "бутылка с водой";*/
+/*$arr = array("продукты", "бутылка воды");*/
 
-/*echo $arr[0];*/
-/*print_r($arr);
-echo count($arr);*/
+//$arr = array("product"=>"продукты", "water"=>"бутылка воды");
 
-/*for ($i=0; $i < count($arr); $i++) { 
-	echo $arr[$i]."<br>";
-}*/
-
-$arr[products] = "продукты";
-$arr[water] = "бутылка с водой";
+$arr = ["продукты", "бутылка воды"];
 
 foreach ($arr as $key => $value) {
-	echo $value."<br>";
 	echo "Ключ к массиву: ".$key." - Значение массива: ".$value."<br>";
 }
 
