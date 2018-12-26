@@ -1,10 +1,22 @@
 <?php
-
-/*$arr = array("продукты", "бутылка воды");*/
-
-//$arr = array("product"=>"продукты", "water"=>"бутылка воды");
-
+// добавление в массив:
 $arr = ["продукты", "бутылка воды"];
+
+//unset($arr[0]);
+
+array_push($arr, "яблоко");
+
+//добавление в начало:
+array_unshift($arr, "апельсин");
+array_push($arr, "апельсин");
+
+$arr = array_unique($arr);
+$arr = array_reverse($arr);
+
+sort($arr);
+
+//перемешивание содержимого, когда нужно рандомное значение каждый раз:
+shuffle($arr);
 
 foreach ($arr as $key => $value) {
 	echo "Ключ к массиву: ".$key." - Значение массива: ".$value."<br>";
