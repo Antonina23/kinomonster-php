@@ -1,17 +1,14 @@
 <?php
 
-print_r($_POST);
+//print_r($_POST);
 
-/*if(isset($_POST['name'])) {
-	echo "Мое имя ".$_POST['name'];
+// защита от взлома:
+if(isset($_POST['name'])) {
+	$nameFilter = htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8');
+	echo "Мое имя ".$nameFilter;
 }
-*/
-$user = "     ВаСЯ     ";
-// удаляем пробелы из начала и из конца:
-//echo trim($user);
 
-// все прописные буквы в строчные:
-echo mb_strtolower(trim($user));
+
 
 ?>
 
