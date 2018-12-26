@@ -1,26 +1,23 @@
 <?php
 
-/*$camera["row1"][0] = "продукты";
-$camera["row1"][1] = "сумка";
-$camera["row2"][0] = "апельсин";
-$camera["row2"][1] = "фотоаппарат";
-$camera["row2"][2] = "телефон";
-
-echo "<pre>";
-print_r($camera);
-echo "</pre>";
-
-foreach ($camera as $key => $value) {
-	foreach ($value as $key2 => $value2) {
-		echo $value2;
-	}
-}*/
-
-$camera["market1"]["row1"][0] = "продукты";
-$camera["market1"]["row1"][1] = "сумка";
-$camera["market1"]["row2"][0] = "апельсин";
-$camera["market2"]["row2"][1] = "фотоаппарат";
-$camera["market2"]["row2"][2] = "телефон";
+$camera = array(
+	"market1"=>array(
+		"row1"=>array(
+			"продукты", "сумка"
+		),
+		"row2"=>array(
+			"апельсин", "фотоаппарат", "телефон"
+		)
+	),
+	"market2"=>array(
+		"row1"=>array(
+			"сушки", "пицца"
+		),
+		"row2"=>array(
+			"кокос", "коробка", "ключи"
+		)
+	)
+);
 
 echo "<pre>";
 print_r($camera);
