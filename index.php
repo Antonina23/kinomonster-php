@@ -4,7 +4,14 @@ print_r($_POST);
 
 /*if(isset($_POST['name'])) {
 	echo "Мое имя ".$_POST['name'];
-}*/
+}
+*/
+$user = "     ВаСЯ     ";
+// удаляем пробелы из начала и из конца:
+//echo trim($user);
+
+// все прописные буквы в строчные:
+echo mb_strtolower(trim($user));
 
 ?>
 
