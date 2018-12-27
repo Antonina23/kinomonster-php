@@ -1,32 +1,30 @@
 <?php
 
-//print_r($_POST);
+function sum($a, $b) {
+	$result = false;
 
-// защита от взлома:
-if(isset($_POST['name'])) {
-	$nameFilter = htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8');
-	echo "Мое имя ".$nameFilter;
+	if(!is_numeric($a)) {
+		$result = "Ошибка. Значение А не является числом";
+	} else if(!is_numeric($b)) {
+		$result = "Ошибка. Значение B не является числом";
+	} else {
+		$result = $a + $b;
+	}
+	return $result;
 }
 
+function maxSum($sum) {
+	$result = false;
 
+	if($sum > 30) {
+		$result = "Сумма больше 30";
+	} else {
+		$result = "Сумма меньше 30";
+	}
+	return $result;
+}
 
+echo sum(2, 30);
+echo maxSum(sum(2,30));
 ?>
-
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body> 
-
-<form action="/" method="post">
-	<input type="text" name="name" placeholder="Ваше имя">
-	<textarea name="comment"></textarea>
-	<input type="hidden" name="user_id" value="666">
-	<input type="submit" value="отправить">
-</form>
-
-</body>
-</html>
 
