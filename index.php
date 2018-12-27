@@ -9,7 +9,7 @@ if(mysqli_connect_error()) {
 
 $mysqli->set_charset('utf8');
 
-$query = "UPDATE movie SET year = 2017 WHERE id = 3";
+$query = "DELETE FROM movie WHERE id = 3";
 $mysqli->query($query);
 
 $mysqli->close();
