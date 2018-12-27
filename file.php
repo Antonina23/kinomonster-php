@@ -1,10 +1,21 @@
 <?php
 
-//$file = fopen("text2.txt", "w");
-//fclose($file);
+$url = "http://yandex.ru";
 
-$file = file_get_contents('text2.txt');
-// также можем в скобках что угодно попросить вывести на экран, например яндекс - $file = file_get_contents('http://yandex.ru');
-echo $file;
+$userAgent = "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.64 Safari/537.31";
+
+$ch = curl_init($url);
+
+$options = array(
+	CURLOPT_CONNECTTIMEOUT => 20,
+	CURLOPT_USERAGENT => $userAgent,
+	CURLOPT_FOLLOWLOCATION => true,
+	CURLOPT_RETURNTRANSFER => true
+);
+
+curl_setopt_array($ch, $options);
+$cl = curl_exec($ch);
+curl_close($ch);
+echo $cl;
 
 ?>
