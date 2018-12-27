@@ -1,14 +1,17 @@
 <?php
 
-//readfile('text.txt');
+$myText = "Записываю эту строку в файл";
 
-$handle = fopen("text.txt", "r");
+// w стирает старый текст, добавляет новый
+//$file = fopen("text.txt", "w");
 
-if($handle) {
-	while(($line = fgets($handle)) !== false) {
-		echo $line;
-	}
-	fclose($handle);
-}
+// а - добавляет текст в конец документа
+$file = fopen("text.txt", "a");
+
+fwrite($file, $myText);
+
+fclose($file);
+
+readfile('text.txt');
 
 ?>
