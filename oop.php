@@ -19,6 +19,7 @@ class Human {
 
 }
 $human = new Human();
+
 $human->setWords('Hi!');
 echo $human->sayIt();
 
